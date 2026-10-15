@@ -1,5 +1,7 @@
 # Flutter Application 01
 
+[Open the live web app](https://kanishksaini-007.github.io/Flutter_Application_01/)
+
 A beginner Flutter profile page by Kanishk Saini, originally made for App Development Club onboarding. This is an improved copy of the original project, not a production app.
 
 ## What it does
