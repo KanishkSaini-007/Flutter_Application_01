@@ -33,10 +33,10 @@ For Android or iOS, select a connected device with `flutter devices`, then run `
 dart format --output=none --set-exit-if-changed lib test
 flutter analyze
 flutter test
-flutter build web
+flutter build web --no-wasm-dry-run
 ```
 
-Static analysis has no issues. Five widget tests cover profile content, scrolling at 320px/390px/1024px and large text. A debug web build was compiled and visually checked at desktop and mobile sizes. A release build is not claimed as tested.
+Static analysis has no issues. Five widget tests cover profile content, scrolling at 320px/390px/1024px and large text. Debug and release web builds compile successfully. The app was visually checked at desktop and mobile sizes. The automated Pages workflow runs formatting, analysis and tests before each release deployment.
 
 ## Structure
 
@@ -47,6 +47,7 @@ lib/profile/widgets/profile_info_card.dart  reusable detail card
 lib/dart_basics.dart                     standalone Dart learning exercise
 test/widget_test.dart                   profile and layout tests
 docs/                                   real screenshots
+.github/workflows/pages.yml               checks and release web deployment
 android/ ios/ web/ linux/ macos/ windows/ original platform scaffolding
 ```
 
